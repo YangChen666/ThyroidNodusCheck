@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/main/java/Dao/AdminsDeal.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/Dao/ImagesDeal.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/Dao/ImgDeal.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/Dao/UsersDeal.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/controller/IndexServlet.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/controller/LoginServlet.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/controller/MysqlServlet.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/controller/false_tupianshangchuan_meiyongde.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/controller/false_tupianshangchuangbeifen.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/controller/imagesDesensitization.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/controller/imagesPretreatment.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/controller/jiejiefenlei.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/controller/logFilter.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/controller/loginNew.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/controller/session_shuoming.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/controller/uploadImage.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/controller/userServlet.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/entity/Admins.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/entity/Images.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/entity/Img.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/entity/Users.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/mysql/insert_Date.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/mysql/mysql.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/mysql/mysqlTool.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/mysql/mysqlb.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/web/IndexServlet.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/web/LoginServlet.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/web/shuo.java" charset="GBK" />
+  </component>
+</project>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+		http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.2.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.2.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+		http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa-1.3.xsd     
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd">
+
+
+	<!-- 组件扫描 -->
+	<context:component-scan base-package="controller"></context:component-scan>
+	<!-- 配置mvc注解扫描  ，扫@RequestMapping-->
+	<mvc:annotation-driven></mvc:annotation-driven>
+	<!-- 配置视图解析器 -->
+	<!--忘记密码-->
+	<bean id="forgot_password" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/main/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+	<!-- 注册页  login_registered-->
+	<bean id="login_registered" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/main/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+	<!-- 登录页   已废弃   -->
+	<bean id="login_new" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/main/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+	<!-- 前台主页 -->
+	<bean id="index" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/main/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+	<bean id="Reindex" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/main/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+	<!-- 后台主页-Home -->
+	<bean id="home" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/main/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+<!-- 图像获取 -->
+	<!-- home_index_shang  去上传图像页-->
+	<bean id="home_index_shang" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/main/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+	<!-- home_index_shang_show  上传图片之后显示图片页-->
+	<bean id="home_index_shang_show" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/main/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+	<!-- home_mysql  查询图片页 -->
+	<bean id="home_mysql" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/main/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+	<!-- home_guanli_upimages  去新增图像页(images) -->
+	<bean id="home_guanli_upimages" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/main/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+	<!-- home_guanli_upimg  去新增图像页(images) -->
+	<bean id="home_guanli_upimg" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/main/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+	<!-- home_guanli_xuigai_images  去新增图像页(images) -->
+	<bean id="home_guanli_xuigai_images" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/main/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+	<!-- home_guanli_xuigai_img  -->
+	<bean id="home_guanli_xuigai_img" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/main/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+	
+<!-- 图像识别与脱敏 -->
+	<bean id="home_ROI_tuo" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/main/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+	<!-- home_ROI_tuo  脱敏之后 -->
+	<bean id="home_img_clip" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/main/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+
+	<bean id="clipImageFrame" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/main/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+	
+<!-- 图像预处理 -->
+	<!-- home_toquzao  打开去噪页面 -->
+	<bean id="home_toquzao" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/main/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+	<!-- home_quzao  显示去噪结果页面 -->
+	<bean id="home_quzao" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/main/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+	<!-- home_tozeng_liang  打开增强亮度页面 -->
+	<bean id="home_tozeng_liang" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/main/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+	<!-- home_zeng_liang  显示增强亮度结果页面 -->
+	<bean id="home_zeng_liang" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/main/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+	<!-- home_tozeng_dui  打开增强对比度页面 -->
+	<bean id="home_tozeng_dui" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/main/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+	<!-- home_zeng_dui  显示增强对比度结果页面 -->
+	<bean id="home_zeng_dui" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/main/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+	<!-- home_tozeng_se  打开增强色度页面 -->
+	<bean id="home_tozeng_se" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/main/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+	<!-- home_zeng_se  显示增强色度结果页面 -->
+	<bean id="home_zeng_se" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/main/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+	<!-- home_tozeng_rui  打开增强锐度页面 -->
+	<bean id="home_tozeng_rui" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/main/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+	<!-- home_zeng_rui  显示增强锐度结果页面 -->
+	<bean id="home_zeng_rui" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/main/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+	
+<!-- 结节分类 -->
+	<!-- home_jiejie_zong  去结节分类总页 -->
+	<bean id="home_jiejie_zong" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/main/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+	<!-- home_jiejie_zc  去结节分类正常-结节页 -->
+	<bean id="home_jiejie_zc" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/main/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+	<!-- home_jiejie_le  去结节分类良恶页 -->
+	<bean id="home_jiejie_le" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/main/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+	<!-- home_jiejie_ee  去结节分类恶性细化页 -->
+	<bean id="home_jiejie_ee" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/main/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+	
+	<!-- home_jiejie_jieguo_zhengchang  显示正常-结节分类结果页 -->
+	<bean id="home_jiejie_jieguo_zhengchang" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/main/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+	<!-- home_jiejie_jieguo_liange  显示良-恶结节分类结果页 -->
+	<bean id="home_jiejie_jieguo_liange" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/main/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+	<!-- home_jiejie_jieguo_ee  显示初步恶化-高度恶化结节分类结果页 -->
+	<bean id="home_jiejie_jieguo_ee" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/main/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+<!-- 数据库数据管理 -->
+	<!-- home_mysql_adminer   -->
+	<bean id="home_mysql_adminer" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/main/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+	<!-- home_mysql_user   -->
+	<bean id="home_mysql_user" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/main/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+	
+	
+	
+	<!-- 文件上传springMVC配置 -->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!-- 上传文件大小上限，字节（10m） -->
+		<property name="maxUploadSize">
+			<value>10485760</value>
+		</property>
+		<!-- 编码 -->
+		<property name="defaultEncoding">
+			<value>UTF-8</value>
+		</property>
+	</bean>
+	
+</beans>
+
+
+
+
+
+
+
+
